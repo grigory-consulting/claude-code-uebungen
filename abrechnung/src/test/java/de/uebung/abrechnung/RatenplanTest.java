@@ -20,6 +20,17 @@ class RatenplanTest {
     }
 
     @Test
+    void alleRatenSindGleichHoch() {
+        assertEquals(List.of(Betrag.euro("40,00"), Betrag.euro("40,00"), Betrag.euro("40,00")),
+                ratenplan.raten(Betrag.euro("120,00"), 3));
+
+        List<Betrag> raten = ratenplan.raten(Betrag.euro("23,80"), 3);
+
+        assertEquals(3, raten.size());
+        assertEquals(1, raten.stream().distinct().count());
+    }
+
+    @Test
     void anzahlDerRatenMussZwischenEinsUndZwoelfLiegen() {
         Betrag gesamt = Betrag.euro("100,00");
 
