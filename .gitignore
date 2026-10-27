@@ -1,0 +1,6 @@
+target/
+.idea/
+*.iml
+.vscode/
+CLAUDE.local.md
+.claude/settings.local.json
