@@ -1,0 +1,12 @@
+# Erfundene Daten fuer Schulungszwecke. Keine echten Personen, keine gueltigen IBANs (Pruefziffer 00).
+kundennummer;vorname;nachname;strasse;plz;ort;iban;vertrag;tarif;mandant
+K-50001;Erika;Mustermann;Heidestrasse 17;51147;Koeln;DE00 1234 5678 9012 3456 78;V-1001;Basis;M-01
+K-50002;Max;Mustermann;Musterweg 4;10115;Berlin;DE00 2345 6789 0123 4567 89;V-1002;Komfort;M-01
+K-50003;Hans;Muster;Am Lindenplatz 2;80331;Muenchen;DE00 3456 7890 1234 5678 90;V-1003;Premium;M-01
+K-50004;Anna;Beispiel;Ringstrasse 88;20095;Hamburg;DE00 4567 8901 2345 6789 01;V-1004;Basis;M-02
+K-50005;Jonas;Probe;Bahnhofstrasse 1a;70173;Stuttgart;DE00 5678 9012 3456 7890 12;V-4711;Komfort;M-01
+K-50006;Lena;Testfrau;Gartenstrasse 23;01067;Dresden;DE00 6789 0123 4567 8901 23;V-1010;Basis;M-01
+K-50007;Paul;Platzhalter;Schillerplatz 9;04109;Leipzig;DE00 7890 1234 5678 9012 34;V-1011;Komfort;M-02
+K-50008;Sophie;Erfunden;Uferweg 31;28195;Bremen;DE00 8901 2345 6789 0123 45;V-1012;Basis;M-02
+K-50009;Felix;Beispielmann;Kirchgasse 5;90402;Nuernberg;DE00 9012 3456 7890 1234 56;V-1015;Premium;M-01
+K-50010;Marie;Musterfrau;Lindenallee 12;30159;Hannover;DE00 0123 4567 8901 2345 67;V-1003;Premium;M-01
