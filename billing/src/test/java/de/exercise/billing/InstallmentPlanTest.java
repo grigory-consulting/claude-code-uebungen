@@ -20,6 +20,17 @@ class InstallmentPlanTest {
     }
 
     @Test
+    void allInstallmentsAreEqual() {
+        assertEquals(List.of(Money.euro("40,00"), Money.euro("40,00"), Money.euro("40,00")),
+                installmentPlan.installments(Money.euro("120,00"), 3));
+
+        List<Money> installments = installmentPlan.installments(Money.euro("23,80"), 3);
+
+        assertEquals(3, installments.size());
+        assertEquals(1, installments.stream().distinct().count());
+    }
+
+    @Test
     void installmentCountMustBeBetweenOneAndTwelve() {
         Money total = Money.euro("100,00");
 
