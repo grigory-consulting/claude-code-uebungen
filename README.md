@@ -9,6 +9,10 @@
 - Zum Mitlesen im Browser: <https://grigory-consulting.github.io/claude-code-uebungen/claude-code.html>
 - Als PDF: <https://grigory-consulting.github.io/claude-code-uebungen/claude-code-folien.pdf>
 
+## Übungen
+
+Die Aufgabenstellungen als PDF: <https://grigory-consulting.github.io/claude-code-uebungen/uebungen.pdf>
+
 ## Bauen und testen
 
 Voraussetzung: JDK 21. Maven muss nicht installiert sein, der Maven Wrapper lädt es beim ersten Aufruf.
