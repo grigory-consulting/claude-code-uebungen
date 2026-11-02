@@ -4,6 +4,11 @@
 
 **Alle Daten in diesem Repository sind erfunden**, auch Namen, Adressen und IBANs unter `data/`.
 
+## Folien
+
+- Zum Mitlesen im Browser: <https://grigory-consulting.github.io/claude-code-uebungen/claude-code.html>
+- Als PDF: <https://grigory-consulting.github.io/claude-code-uebungen/claude-code-folien.pdf>
+
 ## Bauen und testen
 
 Voraussetzung: JDK 21. Maven muss nicht installiert sein, der Maven Wrapper lädt es beim ersten Aufruf.
