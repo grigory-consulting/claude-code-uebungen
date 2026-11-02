@@ -4,4 +4,6 @@ Folien zum Mitlesen: <https://grigory-consulting.github.io/claude-code-uebungen/
 
 Als PDF: [claude-code-folien.pdf](claude-code-folien.pdf)
 
+Übungen als PDF: [uebungen.pdf](uebungen.pdf)
+
 Dieser Branch enthält nur die Folienseite. Die Übungen liegen auf `main`.
