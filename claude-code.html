@@ -919,9 +919,9 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/cli-reference
 
 <p class="eyebrow">Teil II · Bedienen</p>
 
-## IntelliJ: Plugin „Claude Code [Beta]“
+## IntelliJ: optionales Plugin „Claude Code [Beta]“
 
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Plugin aus dem JetBrains Marketplace; es startet `claude` im integrierten Terminal und bringt **keine eigene CLI** mit 
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->`claude` läuft auch ohne Plugin im Terminal von IntelliJ; das Plugin aus dem JetBrains Marketplace bringt **keine eigene CLI** mit 
 - &shy;<!-- .element: class="fragment" data-fragment-index="2" --><span class="kbd">Ctrl</span>+<span class="kbd">Esc</span> öffnet Claude Code, Änderungen erscheinen im Diff-Viewer der IDE 
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Claude sieht automatisch Ihre Auswahl und die aktive Datei; <span class="kbd">Alt</span>+<span class="kbd">Ctrl</span>+<span class="kbd">K</span> fügt einen Verweis wie `@src/Datei.java#L1-99` ein 
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Externes Terminal: `/ide` verbindet die Sitzung mit IntelliJ 
@@ -4619,7 +4619,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/hooks" target
 
 ## Reichweite einer Read-Deny-Regel
 
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Auswahl in IntelliJ**: Claude Code teilt Auswahl und offenen Tab aus einer gesperrten Datei nicht 
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Auswahl in IntelliJ** (mit Plugin): Claude Code teilt Auswahl und offenen Tab aus einer gesperrten Datei nicht 
 - &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**Lesewerkzeug**: Read wird abgelehnt 
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Bash**: Erkannte Dateibefehle wie `cat`, `head`, `tail`, `sed`, `tee` und Umleitungen sind gesperrt 
 - &shy;<!-- .element: class="fragment" data-fragment-index="4" -->**PowerShell**: `Get-Content` wird blockiert, `cmd /c type` läuft mit passender Allow-Regel durch 
