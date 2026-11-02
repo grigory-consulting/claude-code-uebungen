@@ -1001,6 +1001,44 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/model-config"
 ---?
 " data-separator-vertical="?
 --?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
+
+<p class="eyebrow">Teil II · Bedienen</p>
+
+## Advisor: zweites Modell für schwierige Entscheidungen
+
+Claude arbeitet mit dem Hauptmodell weiter und fragt an wichtigen Stellen ein mindestens gleich starkes Modell um Rat.
+
+```bash
+/advisor                 # Auswahl öffnen
+/advisor opus            # setzen und als Standard speichern
+/advisor off             # ausschalten
+claude --advisor opus    # nur für diese Sitzung
+```
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Wann**: Claude entscheidet selbst, meist vor der Wahl eines Wegs, bei wiederkehrenden Fehlern und vor „fertig“ 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**Was der Advisor sieht**: den ganzen Verlauf mit allen Werkzeugaufrufen. Seinen Rat zeigt <span class="kbd">Ctrl+O</span> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Paarung**: Zu Opus 5.5 passen Opus 5 oder neuer und Fable, zu Sonnet 5.5 außerdem Sonnet 5.5 
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->**Kosten**: Jede Beratung liest den Verlauf neu, ohne Cache. Das lohnt sich bei langen Aufgaben wie großen Refactorings 
+
+<div class="warn fragment" data-fragment-index="5">
+
+Experimentell und nur über die Anthropic-API verfügbar, nicht über Bedrock, Google Cloud oder Foundry.
+
+</div>
+
+<div class="quelle fragment" data-fragment-index="6">
+
+Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/advisor" target="_blank" rel="noopener">Escalate hard decisions with the advisor tool</a>
+
+</div>
+</div>
+
+</script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
@@ -1387,7 +1425,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/memory" targe
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller densest drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil III · Projektkontext</p>
+<p class="eyebrow">Teil III · Projektkontext · Anderes Projekt: Bestelldienst</p>
 
 ## Beispiel: CLAUDE.md
 
@@ -1646,7 +1684,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/memory" targe
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil III · Projektkontext</p>
+<p class="eyebrow">Teil III · Projektkontext · Übungsprojekt</p>
 
 ## Ohne und mit CLAUDE.md
 
@@ -1791,7 +1829,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/how-claude-co
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil IV · Aufträge und Codebasen</p>
+<p class="eyebrow">Teil IV · Aufträge und Codebasen · Übungsprojekt</p>
 
 ## Auftrag vorher und nachher
 
@@ -1953,7 +1991,7 @@ Eine Auftragsart je Auftrag: erst analysieren, dann ändern, dann prüfen. Ein A
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil IV · Aufträge und Codebasen</p>
+<p class="eyebrow">Teil IV · Aufträge und Codebasen · Übungsprojekt</p>
 
 ## Analyseauftrag
 
@@ -2013,7 +2051,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/plugins/code-
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil IV · Aufträge und Codebasen</p>
+<p class="eyebrow">Teil IV · Aufträge und Codebasen · Übungsprojekt</p>
 
 ## Behauptungen am Code prüfen
 
@@ -2095,7 +2133,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/permission-mo
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil IV · Aufträge und Codebasen</p>
+<p class="eyebrow">Teil IV · Aufträge und Codebasen · Übungsprojekt</p>
 
 ## Reviewauftrag
 
@@ -2120,7 +2158,7 @@ Keine Befunde zur Formatierung.
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil IV · Aufträge und Codebasen</p>
+<p class="eyebrow">Teil IV · Aufträge und Codebasen · Übungsprojekt</p>
 
 ## Ein Plan legt Annahmen offen
 
@@ -2242,7 +2280,7 @@ README und Architekturdoku aus dem Code erzeugen und mit jeder Änderung nachzie
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil V · Modernisierung</p>
+<p class="eyebrow">Teil V · Modernisierung · Übungsprojekt</p>
 
 ## Bestehenden Code lesen lassen
 
@@ -2414,7 +2452,7 @@ LocalDate since = LocalDate.parse(dateText, DATE);
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil V · Modernisierung</p>
+<p class="eyebrow">Teil V · Modernisierung · Übungsprojekt</p>
 
 ## Erst Verhalten sichern: Charakterisierungstests
 
@@ -2422,7 +2460,8 @@ Ein Charakterisierungstest schreibt fest, was der Code **heute** tut, nicht was 
 
 ```markdown
 Schreibe in PaymentReminderTest einen Charakterisierungstest: Welche Forderung
-hat eine Mahnung der Stufe 2 für die vorhandene Rechnung?
+hat eine Mahnung der Stufe 2 für die Rechnung im Feld invoice
+(Basisvertrag, 2026-09, brutto 23,80 EUR)?
 Ändere keinen Produktionscode. Übernimm die Erwartung aus einem echten
 Testlauf, nicht aus deiner Vermutung. Führe mvnw.cmd test aus.
 ```
@@ -2547,38 +2586,6 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/memory" targe
 ---?
 " data-separator-vertical="?
 --?
-" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
-
-<p class="eyebrow">Teil V · Modernisierung</p>
-
-## Stille Verhaltensänderung
-
-```bash
-[ERROR] Tests run: 13, Failures: 4, Errors: 0, Skipped: 0
-[ERROR]   PaymentFileReaderTest.sampleFileTotalWithSign:70 expected: <390,04 EUR> but was: <434,28 EUR>
-[ERROR]   PaymentFileReaderTest.creditNoteHasNegativeAmount:53 expected: <-7,12 EUR> but was: <7,12 EUR>
-[ERROR]   PaymentFileReaderTest.creditsInSampleFileAreNegative:62 expected: <-7,12 EUR> but was: <7,12 EUR>
-[ERROR]   PaymentFileReaderTest.sumPerContractOffsetsCredits:78 expected: <33,24 EUR> but was: <47,48 EUR>
-```
-
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->In der Zahlungsdatei kennzeichnet `H` eine Gutschrift 
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Der Altcode setzt das Vorzeichen bei `H` erst **nach** dem Einlesen 
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Beim Umbau ist dieser nachgelagerte Schritt weggefallen 
-- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Der Code kompiliert und verbucht Gutschriften als Zahlungen; aufgefallen ist das nur im Test 
-- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Die Vorzeichenregel gehört jetzt in den Parser, in einen eigenen Test mit sprechendem Namen und in die Doku 
-
-<div class="merk fragment" data-fragment-index="6">
-
-Charakterisierungstests über die ganze Beispieldatei sichern auch Regeln, die vor dem Umbau niemand kannte.
-
-</div>
-</div>
-
-</script></section><section data-separator="?
----?
-" data-separator-vertical="?
---?
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
@@ -2664,7 +2671,7 @@ Diffs nachvollziehen, einen Subagenten als zweiten Blick einsetzen, vor Commit u
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VI · Tests und Qualität</p>
+<p class="eyebrow">Teil VI · Tests und Qualität · Übungsprojekt</p>
 
 ## Teststrategie mit dem Agenten
 
@@ -2693,7 +2700,7 @@ Schreibe noch keine Tests. Ich wähle aus.
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VI · Tests und Qualität</p>
+<p class="eyebrow">Teil VI · Tests und Qualität · Übungsprojekt</p>
 
 ## Erwartete Werte aus der Fachregel
 
@@ -2747,7 +2754,7 @@ void nineteenPercentOfNineNinetyNine() {
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VI · Tests und Qualität</p>
+<p class="eyebrow">Teil VI · Tests und Qualität · Übungsprojekt</p>
 
 ## Unit-Tests mit JUnit 5
 
@@ -2778,7 +2785,7 @@ void reminderLevelRisesWithEachDeadline(LocalDate today, int level) {
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VI · Tests und Qualität</p>
+<p class="eyebrow">Teil VI · Tests und Qualität · Übungsprojekt</p>
 
 ## Integrations- und Regressionstests
 
@@ -2807,7 +2814,7 @@ void unpaidSeptemberInvoiceCostsReminderFeeOn30September() {
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VI · Tests und Qualität</p>
+<p class="eyebrow">Teil VI · Tests und Qualität · Übungsprojekt</p>
 
 ## Fehlgeschlagene Tests analysieren
 
@@ -2845,7 +2852,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/sub-agents" t
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VI · Tests und Qualität</p>
+<p class="eyebrow">Teil VI · Tests und Qualität · Übungsprojekt</p>
 
 ## Fehler per Test reproduzieren
 
@@ -2861,7 +2868,7 @@ Zeige mir den roten Test, bevor du Produktionscode änderst.
 ```
 
 - &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Der rote Test **belegt** den Fehler und sichert später den Fix ab 
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**„Bisher geprüft“** verhindert, dass Claude verworfene Spuren wiederholt 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**„Bisher geprüft“** nennt, was Sie schon ausgeschlossen haben. Claude sucht dort nicht noch einmal 
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Bleibt der Test grün**, liegt der Fehler woanders: eine Ebene höher testen, etwa `ContractService`
 </div>
 
@@ -2962,12 +2969,14 @@ Lassen Sie Claude die Liste abarbeiten und je Punkt den Beleg zeigen: Testausgab
 ---?
 " data-separator-vertical="?
 --?
-" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller densest drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VI · Tests und Qualität</p>
+<p class="eyebrow">Teil VI · Tests und Qualität · Übungsprojekt</p>
 
 ## Test angepasst statt Fehler behoben
+
+Fehler: 100,00 EUR in drei Raten ergeben 3 × 33,33 = 99,99 EUR. Ein neuer Test zeigt das rot, der Fix macht einen alten Test rot.
 
 <div class="columns">
 
@@ -3280,7 +3289,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/worktrees" ta
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VII · Git und Teamwork</p>
+<p class="eyebrow">Teil VII · Git und Teamwork · Übungsprojekt</p>
 
 ## Commit-Messages erzeugen lassen
 
@@ -3338,7 +3347,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/memory" targe
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VII · Git und Teamwork</p>
+<p class="eyebrow">Teil VII · Git und Teamwork · Übungsprojekt</p>
 
 ## Pull Request vorbereiten
 
@@ -3409,7 +3418,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/skills" targe
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VII · Git und Teamwork</p>
+<p class="eyebrow">Teil VII · Git und Teamwork · Übungsprojekt</p>
 
 ## Entscheidungen festhalten
 
@@ -3837,7 +3846,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/hooks-guide" 
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VIII · Skills und Automatisierung</p>
+<p class="eyebrow">Teil VIII · Skills und Automatisierung · Übungsprojekt</p>
 
 ## Hook `MoneyCheck`: Konfiguration
 
@@ -3900,7 +3909,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/hooks" target
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VIII · Skills und Automatisierung</p>
+<p class="eyebrow">Teil VIII · Skills und Automatisierung · Übungsprojekt</p>
 
 ## Hook `MoneyCheck`: Eingabe lesen
 
@@ -3937,7 +3946,7 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/hooks" target
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
-<p class="eyebrow">Teil VIII · Skills und Automatisierung</p>
+<p class="eyebrow">Teil VIII · Skills und Automatisierung · Übungsprojekt</p>
 
 ## Hook `MoneyCheck`: prüfen und melden
 
@@ -5145,19 +5154,99 @@ Prüfung: (Testbefehl), Review des Diffs
 ---?
 " data-separator-vertical="?
 --?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller densest drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
+
+<p class="eyebrow">Anhang</p>
+
+## Quellen: Claude Code Docs, Stand Oktober und November 2026
+
+<div class="columns">
+
+<div class="column" style="width: 50%">
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><a href="https://code.claude.com/docs/en/setup" target="_blank" rel="noopener">Advanced setup</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><a href="https://code.claude.com/docs/en/hooks-guide" target="_blank" rel="noopener">Automate actions with hooks</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" --><a href="https://code.claude.com/docs/en/checkpointing" target="_blank" rel="noopener">Checkpointing</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" --><a href="https://code.claude.com/docs/en/github-actions" target="_blank" rel="noopener">Claude Code GitHub Actions</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="5" --><a href="https://code.claude.com/docs/en/gitlab-ci-cd" target="_blank" rel="noopener">Claude Code GitLab CI/CD</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="6" --><a href="https://code.claude.com/docs/en/cli-reference" target="_blank" rel="noopener">CLI reference</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="7" --><a href="https://code.claude.com/docs/en/plugins/code-intelligence" target="_blank" rel="noopener">Code intelligence plugins</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="8" --><a href="https://code.claude.com/docs/en/mcp" target="_blank" rel="noopener">Connect Claude Code to tools via MCP</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="9" --><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Create custom subagents</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="10" --><a href="https://code.claude.com/docs/en/data-usage" target="_blank" rel="noopener">Data usage</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="11" --><a href="https://code.claude.com/docs/en/managed-settings" target="_blank" rel="noopener">Deploy managed settings</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="12" --><a href="https://code.claude.com/docs/en/advisor" target="_blank" rel="noopener">Escalate hard decisions with the advisor tool</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="13" --><a href="https://code.claude.com/docs/en/context-window" target="_blank" rel="noopener">Explore the context window</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="14" --><a href="https://code.claude.com/docs/en/features-overview" target="_blank" rel="noopener">Extend Claude Code</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="15" --><a href="https://code.claude.com/docs/en/hooks" target="_blank" rel="noopener">Hooks reference</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="16" --><a href="https://code.claude.com/docs/en/how-claude-code-works" target="_blank" rel="noopener">How Claude Code works</a> 
+
+</div>
+
+<div class="column" style="width: 50%">
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="17" --><a href="https://code.claude.com/docs/en/agent-sdk/agent-loop" target="_blank" rel="noopener">How the agent loop works</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="18" --><a href="https://code.claude.com/docs/en/jetbrains" target="_blank" rel="noopener">JetBrains IDEs</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="19" --><a href="https://code.claude.com/docs/en/sessions" target="_blank" rel="noopener">Manage sessions</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="20" --><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Memory</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="21" --><a href="https://code.claude.com/docs/en/model-config" target="_blank" rel="noopener">Model configuration</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="22" --><a href="https://code.claude.com/docs/en/permission-modes" target="_blank" rel="noopener">Permission modes</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="23" --><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Permissions</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="24" --><a href="https://code.claude.com/docs/en/plugins/overview" target="_blank" rel="noopener">Plugins</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="25" --><a href="https://code.claude.com/docs/en/headless" target="_blank" rel="noopener">Run Claude Code programmatically</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="26" --><a href="https://code.claude.com/docs/en/worktrees" target="_blank" rel="noopener">Run parallel sessions with worktrees</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="27" --><a href="https://code.claude.com/docs/en/sandboxing" target="_blank" rel="noopener">Sandboxing</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="28" --><a href="https://code.claude.com/docs/en/security" target="_blank" rel="noopener">Security</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="29" --><a href="https://code.claude.com/docs/en/settings" target="_blank" rel="noopener">Settings</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="30" --><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Skills</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="31" --><a href="https://code.claude.com/docs/en/vs-code" target="_blank" rel="noopener">VS Code</a> 
+
+</div>
+
+</div>
+</div>
+
+</script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
+" data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller dense drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
+
+<p class="eyebrow">Anhang</p>
+
+## Quellen: Forschung und Entwicklung der Werkzeuge
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Vaswani et al.: <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a>, 2017 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Brown et al.: <a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">Language Models are Few-Shot Learners</a>, 2020 
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Yao et al.: <a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener">ReAct: Synergizing Reasoning and Acting in Language Models</a>, 2022 
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Jimenez et al.: <a href="https://arxiv.org/abs/2310.06770" target="_blank" rel="noopener">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</a>, 2023 
+- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Yang et al.: <a href="https://arxiv.org/abs/2405.15793" target="_blank" rel="noopener">SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</a>, 2024 
+- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->Rombaut: <a href="https://arxiv.org/abs/2604.03515" target="_blank" rel="noopener">Inside the Scaffold: A Source-Code Taxonomy of Coding Agent Architectures</a>, 2026 
+- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->Michael Feathers: Working Effectively with Legacy Code, Prentice Hall 2004 
+- &shy;<!-- .element: class="fragment" data-fragment-index="8" -->GitHub Blog: <a href="https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/" target="_blank" rel="noopener">Introducing GitHub Copilot</a>, 2021 
+- &shy;<!-- .element: class="fragment" data-fragment-index="9" -->Wikipedia: <a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank" rel="noopener">ChatGPT</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="10" -->TechCrunch: <a href="https://techcrunch.com/2023/06/13/openai-intros-new-generative-text-features-while-reducing-pricing/" target="_blank" rel="noopener">OpenAI intros new generative text features while reducing pricing</a>, 2023 
+- &shy;<!-- .element: class="fragment" data-fragment-index="11" -->Anthropic: <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener">Model Context Protocol</a>, <a href="https://www.anthropic.com/news/claude-3-7-sonnet" target="_blank" rel="noopener">Claude 3.7 Sonnet</a>, <a href="https://www.anthropic.com/news/claude-4" target="_blank" rel="noopener">Claude 4</a>
+</div></script></section><section data-separator="?
+---?
+" data-separator-vertical="?
+--?
 " data-separator-notes="note:" data-markdown><script type="text/template"><!-- .slide: class="smaller drop" template="" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: start; justify-content: center" absolute="true">
 
 <p class="eyebrow">Anhang</p>
 
-## Quellen
+## Quellen: Andere Dokumentation und Sicherheit
 
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Anthropic**: Claude Code Docs (Arbeitsweise, Kontextfenster, Memory, Settings, Permission Modes, Sandbox, Skills, Hooks, Subagenten, Worktrees, Headless, Managed Settings, Datennutzung, Sicherheit, IDE-Integrationen), Stand Oktober 2026, <a href="https://code.claude.com/docs" target="_blank" rel="noopener">code.claude.com/docs</a> 
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**OWASP**: Top 10 for LLM Applications 2025, LLM01 Prompt Injection, <a href="https://genai.owasp.org" target="_blank" rel="noopener">genai.owasp.org</a> 
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Michael Feathers**: Working Effectively with Legacy Code, Prentice Hall 2004 (Charakterisierungstests)
-</div>
-
-</script></section></section></div>
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Claude Docs**: <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener">Tool use with Claude</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**GitHub Docs**: <a href="https://docs.github.com/en/copilot/concepts/agent-capabilities/about-agents/about-github-copilot-agents" target="_blank" rel="noopener">About GitHub Copilot agents</a>, <a href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions" target="_blank" rel="noopener">Instructions</a>, <a href="https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli" target="_blank" rel="noopener">CLI</a>, <a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models" target="_blank" rel="noopener">Modelle</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Cursor Docs**: <a href="https://cursor.com/docs/agent/overview" target="_blank" rel="noopener">Agent overview</a>, <a href="https://cursor.com/docs/rules" target="_blank" rel="noopener">Rules</a>, <a href="https://cursor.com/docs/agent/tools/terminal" target="_blank" rel="noopener">Terminal</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->**JetBrains AI Assistant Docs**: <a href="https://www.jetbrains.com/help/ai-assistant/activate-agents.html" target="_blank" rel="noopener">Activate agents</a> 
+- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->**BSI**: <a href="https://www.bsi.bund.de/SharedDocs/Cybersicherheitswarnungen/DE/2023/2023-249034-1032.html" target="_blank" rel="noopener">Indirect Prompt Injections: Intrinsische Schwachstelle in anwendungsintegrierten KI-Sprachmodellen</a>, 2023 
+- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->**OWASP**: <a href="https://genai.owasp.org" target="_blank" rel="noopener">Top 10 for LLM Applications 2025</a>, <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener">LLM01 Prompt Injection</a>, LLM03 Supply Chain, LLM09 Misinformation
+</div></script></section></section></div>
     </div>
 
     <script src="dist/reveal.js"></script>
