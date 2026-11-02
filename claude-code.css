@@ -1,0 +1,359 @@
+/* GH-300-Deck, Obsidian Slides Extended. Design Seminarblau (Palette wie diagram-design-Profil devadze-seminar).
+   Übertragen aus der Quarto-Fassung custom.scss (Backup in _backup_quarto_2026-10-22/).
+   Dient zugleich als highlightTheme (Token-Farben unten), damit kein toter Theme-Link entsteht. */
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Geist+Mono:wght@400;600&display=swap');
+
+:root {
+  --sb-bg: #f4f7fb;
+  --sb-navy: #183b66;
+  --sb-blue: #2459a6;
+  --sb-text: #24364d;
+  --sb-muted: #5a6b82;
+  --sb-soft: #e8f0fb;
+  --sb-border: #b9c6d8;
+  --sb-amber: #b45309;
+  --sb-amber-soft: #fdf3e7;
+  --sb-green: #2f6b3a;
+  --sb-green-soft: #eaf4ec;
+
+  --r-background-color: #f4f7fb;
+  --r-main-font: 'Source Serif 4', Georgia, serif;
+  --r-main-font-size: 32px;
+  --r-main-color: #24364d;
+  --r-heading-font: 'Instrument Serif', Georgia, serif;
+  --r-heading-color: #183b66;
+  --r-heading-font-weight: 400;
+  --r-heading-text-transform: none;
+  --r-heading-letter-spacing: normal;
+  --r-heading1-size: 2.4em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.2em;
+  --r-link-color: #2459a6;
+  --r-code-font: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+.reveal-viewport { background: var(--sb-bg); }
+.reveal { font-family: 'Source Serif 4', Georgia, serif; color: var(--sb-text); }
+.reveal pre, .reveal code, .reveal kbd { font-family: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+.reveal h1, .reveal h2, .reveal h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: var(--sb-navy); text-transform: none; }
+
+/* Folieninhalt: Slides Extended legt ihn in section > div[absolute="true"] (Flex-Spalte, Inline-Style
+   zentriert). Inhaltsfolien oben und linksbündig wie in der Quarto-Fassung. */
+.reveal .slides section { text-align: left; }
+.reveal .slides section > div[absolute="true"] {
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+}
+.reveal .slides section.title-slide > div[absolute="true"],
+.reveal .slides section.section-slide > div[absolute="true"] { justify-content: center !important; }
+
+.reveal strong { font-weight: 600; }
+.reveal p, .reveal li { line-height: 1.38; }
+.reveal ul, .reveal ol { margin-left: 0.9em; display: block; }
+.reveal li { margin: 0.14em 0; }
+.reveal li::marker { color: var(--sb-blue); }
+/* Nummern als Zähler statt ::marker: Sie beginnen bündig mit dem Folientitel, auch zweistellig,
+   und stehen in der Schrift des Fließtexts */
+.reveal .numbered ul { list-style: none; margin-left: 0; counter-reset: schritt; }
+.reveal .numbered li { counter-increment: schritt; position: relative; padding-left: 1.5em; }
+.reveal .numbered li::before {
+  content: counter(schritt) ".";
+  position: absolute;
+  left: 0;
+  color: var(--sb-blue);
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+}
+.reveal ol li::marker { font-weight: 600; }
+
+/* Kapitelzeile über dem Folientitel (setzt assemble_deck.py) */
+.reveal .slides section p.eyebrow {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.4em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sb-blue);
+  opacity: 0.75;
+  margin: 0 0 0.25em 0;
+  line-height: 1;
+}
+.reveal .slides section.smaller p.eyebrow { font-size: calc(0.4em / 0.9); }
+.reveal .slides section.dense p.eyebrow { font-size: calc(0.4em / 0.8); }
+.reveal .slides section.densest p.eyebrow { font-size: calc(0.4em / 0.72); }
+
+/* Folientitel: Haarlinie über die ganze Breite, Akzentstück links */
+.reveal .slides section h2 {
+  position: relative;
+  font-size: 1.6em;
+  padding-bottom: 0.28em;
+  margin: 0 0 0.55em 0;
+  border-bottom: 1px solid var(--sb-border);
+  letter-spacing: -0.005em;
+  line-height: 1.1;
+}
+.reveal .slides section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 96px;
+  height: 3px;
+  background: var(--sb-blue);
+}
+/* .smaller verkleinert die Folie auf 0.7em; Titel bleiben trotzdem überall gleich groß */
+.reveal .slides section.smaller > div[absolute="true"] { font-size: 0.9em; }
+.reveal .slides section.smaller h2 { font-size: calc(1.6em / 0.9); }
+/* .dense und .densest für die Folien, die bei 0.9em überlaufen (deckcheck.py) */
+.reveal .slides section.dense > div[absolute="true"] { font-size: 0.8em; }
+.reveal .slides section.dense h2 { font-size: calc(1.6em / 0.8); }
+.reveal .slides section.densest > div[absolute="true"] { font-size: 0.72em; }
+.reveal .slides section.densest h2 { font-size: calc(1.6em / 0.72); }
+.reveal h2 code, .reveal h3 code {
+  background: transparent !important;
+  padding: 0 !important;
+  color: var(--sb-blue);
+  font-size: 0.74em;
+}
+
+/* Kicker über dem Titel von Titel- und Trennfolien */
+.reveal .slides section p.kicker {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sb-blue);
+  margin: 0 0 0.6em 0;
+}
+/* Große blasse Ziffer rechts unten (Titel: GH-300, Trennfolien: Teilnummer) */
+.reveal .slides section .numeral {
+  position: absolute;
+  right: -0.02em;
+  bottom: -0.32em;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 9em;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--sb-navy);
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Titelfolie */
+.reveal .slides section.title-slide h1 {
+  position: relative;
+  font-size: 3.2em;
+  color: var(--sb-navy);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0 0 0.25em 0;
+  padding-bottom: 0.22em;
+}
+.reveal .slides section.title-slide h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 120px;
+  height: 4px;
+  background: var(--sb-blue);
+}
+.reveal .slides section.title-slide .subtitle {
+  color: var(--sb-blue);
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.45em;
+  line-height: 1.15;
+  margin: 0.2em 0 1.6em 0;
+  max-width: 22em;
+}
+.reveal .slides section.title-slide .byline {
+  display: flex;
+  gap: 1.2em;
+  align-items: baseline;
+  margin: 0;
+  padding-top: 0.6em;
+  border-top: 1px solid var(--sb-border);
+  max-width: 24em;
+  color: var(--sb-text);
+}
+.reveal .slides section.title-slide .byline .date {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.72em;
+  color: var(--sb-muted);
+}
+
+/* Trennfolien (Navy) */
+.reveal .slides section.section-slide p.kicker { color: #8fb3e3; }
+.reveal .slides section.section-slide h1 {
+  position: relative;
+  color: #ffffff;
+  font-size: 2.6em;
+  line-height: 1.05;
+  border: none;
+  margin: 0 0 0.45em 0;
+  padding-bottom: 0.3em;
+  max-width: 16em;
+}
+.reveal .slides section.section-slide h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 96px;
+  height: 3px;
+  background: #8fb3e3;
+}
+.reveal .slides section.section-slide p { color: #dbe6f5; max-width: 26em; }
+.reveal .slides section.section-slide .numeral { color: #ffffff; opacity: 0.08; font-size: 13em; bottom: -0.3em; }
+
+/* Code */
+.reveal pre {
+  box-shadow: none;
+  border: 1px solid var(--sb-border);
+  border-radius: 8px;
+  font-size: 0.56em;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0.4em 0;
+  background: #ffffff;
+  border-left: 3px solid var(--sb-blue);
+}
+.reveal pre code { line-height: 1.45; max-height: 560px; padding: 0.7em 0.9em; }
+.reveal code { color: var(--sb-blue); }
+/* Geist Mono hat eine hohe x-Höhe; im Fließtext etwas kleiner, damit es nicht größer wirkt als die Serife */
+.reveal :not(pre) > code { font-size: 0.86em; }
+.reveal .slides section.smaller pre { font-size: 0.62em; }
+
+/* Tabellen waagerecht zentriert (senkrechte Ränder fest, sonst zentriert der Flex-Wrapper auch senkrecht) */
+.reveal table {
+  margin: 0.4em auto !important;
+  font-size: 0.78em;
+  border-collapse: collapse;
+}
+.reveal table th { background: var(--sb-soft); border-bottom: 2px solid var(--sb-navy); color: var(--sb-navy); font-weight: 600; text-align: left; }
+.reveal table td { background: #ffffff; border-bottom: 1px solid #dde5f0; }
+.reveal table tbody tr:nth-child(even) td { background: #f8fafd; }
+.reveal table td, .reveal table th { padding: 0.36em 0.7em; }
+
+/* Bilder ohne Schatten, zentriert */
+.reveal img { box-shadow: none; border-radius: 6px; }
+.reveal .slides section div[absolute="true"] > img,
+.reveal .slides section div[absolute="true"] > p > img { align-self: center; display: block; margin: 0.3em auto; max-width: 90%; max-height: 520px; }
+.reveal .slides section div[absolute="true"]:has(> ul) > img,
+.reveal .slides section div[absolute="true"]:has(> ul) > p > img { max-height: 320px; }
+
+/* Callout-Boxen */
+.reveal .merk, .reveal .warn, .reveal .tipp {
+  margin: 0.6em 0 0.2em;
+  padding: 0.5em 0.8em;
+  border-radius: 6px;
+  font-size: 0.86em;
+  border-left: 5px solid var(--sb-blue);
+  background: var(--sb-soft);
+}
+.reveal .warn { border-left-color: var(--sb-amber); background: var(--sb-amber-soft); }
+.reveal .tipp { border-left-color: var(--sb-green); background: var(--sb-green-soft); }
+.reveal .merk, .reveal .warn, .reveal .tipp { border-radius: 0 6px 6px 0; }
+.reveal .merk p, .reveal .warn p, .reveal .tipp p { margin: 0.15em 0; }
+
+/* Zweispalter */
+.reveal .columns { display: flex; gap: 1.2em; align-items: flex-start; width: 100%; }
+.reveal .column { flex: 0 1 auto; min-width: 0; }
+.reveal .column > :first-child,
+.reveal .column > .fragment:first-child > :first-child { margin-top: 0; }
+
+/* Karten (Lernziele, Überblick) */
+.reveal .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.6em;
+  font-size: 0.8em;
+}
+.reveal .card {
+  background: #ffffff;
+  border: 1px solid var(--sb-border);
+  border-top: 3px solid var(--sb-blue);
+  border-radius: 6px;
+  padding: 0.55em 0.75em;
+}
+.reveal .card p { margin: 0.2em 0; }
+.reveal .card .card-title {
+  display: block;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.3em;
+  line-height: 1.1;
+  color: var(--sb-navy);
+  margin-bottom: 0.25em;
+}
+.reveal .card .card-title p { margin: 0; }
+
+.reveal .kbd, .reveal kbd {
+  font-family: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.8em;
+  border: 1px solid var(--sb-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0 0.3em;
+  background: #ffffff;
+}
+
+/* Quelle unten auf der Folie (Inhalt ist eine Flex-Spalte über die volle Höhe) */
+.reveal .quelle { font-size: 0.5em; color: var(--sb-muted); margin-top: auto !important; padding-top: 0.6em; }
+.reveal .quelle p { margin: 0; }
+.reveal .quelle a, .reveal .slides section li a {
+  color: var(--sb-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--sb-border);
+  text-underline-offset: 0.15em;
+}
+.reveal .quelle a:hover, .reveal .slides section li a:hover { text-decoration-color: var(--sb-blue); }
+.reveal .slide-number { color: var(--sb-muted); background: transparent; }
+
+/* Syntax-Highlighting (Block aus ~/.claude/skills/seminarproduktion/assets/slides-extended-basics.css) */
+.reveal pre code.hljs,
+.reveal pre code { background: transparent; color: #24292e; }
+.reveal .hljs-comment,
+.reveal .hljs-quote { color: #6a737d; font-style: italic; }
+.reveal .hljs-keyword,
+.reveal .hljs-selector-tag,
+.reveal .hljs-doctag,
+.reveal .hljs-template-tag,
+.reveal .hljs-type { color: #d73a49; }
+.reveal .hljs-string,
+.reveal .hljs-regexp,
+.reveal .hljs-meta .hljs-string { color: #032f62; }
+.reveal .hljs-number,
+.reveal .hljs-literal,
+.reveal .hljs-attr,
+.reveal .hljs-attribute,
+.reveal .hljs-symbol,
+.reveal .hljs-meta,
+.reveal .hljs-operator,
+.reveal .hljs-variable,
+.reveal .hljs-selector-class,
+.reveal .hljs-selector-id,
+.reveal .hljs-selector-attr,
+.reveal .hljs-selector-pseudo { color: #005cc5; }
+.reveal .hljs-title,
+.reveal .hljs-title.class_,
+.reveal .hljs-title.function_,
+.reveal .hljs-section { color: #6f42c1; }
+.reveal .hljs-built_in,
+.reveal .hljs-bullet { color: #e36209; }
+.reveal .hljs-name,
+.reveal .hljs-selector-tag.hljs-name { color: #22863a; }
+.reveal .hljs-params,
+.reveal .hljs-subst,
+.reveal .hljs-punctuation { color: #24292e; }
+.reveal .hljs-addition { background: #f0fff4; color: #22863a; }
+.reveal .hljs-deletion { background: #ffeef0; color: #b31d28; }
+.reveal .hljs-emphasis { font-style: italic; }
+.reveal .hljs-strong { font-weight: 700; }
+/* Prompts stehen als ```markdown im Deck. highlight.js liest Unterstriche in Dateinamen
+   (test_import.py) als Kursivmarkierung; in Prompts ist das nie gemeint. Fettgesetzte
+   Feldnamen (**Problem:**) bekommen die Titelfarbe. */
+.reveal pre code.language-markdown .hljs-emphasis { font-style: normal; }
+.reveal pre code.language-markdown .hljs-strong { color: #183b66; }
