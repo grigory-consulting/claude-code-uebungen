@@ -7,8 +7,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "java",
-            "args": ["${CLAUDE_PROJECT_DIR}/.claude/hooks/CompileCheck.java"],
+            "shell": "bash",
+            "command": "grep -qE \"[.]java|pom[.]xml\" || exit 0; cd \"$CLAUDE_PROJECT_DIR\" && ./mvnw -q -o compile 1>&2 || exit 2",
             "timeout": 180,
             "statusMessage": "Kompiliere nach Änderung"
           }
