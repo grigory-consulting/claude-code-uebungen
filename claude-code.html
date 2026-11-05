@@ -2506,9 +2506,9 @@ Quelle: Michael Feathers, Working Effectively with Legacy Code, Prentice Hall 20
 <div class="numbered">
 
 - &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Plan**: im Plan Mode (<span class="kbd">Shift</span>+<span class="kbd">Tab</span> oder `/plan` vor dem Auftrag) Schritte vorschlagen lassen, je Schritt ein Altmuster 
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**Ein Schritt**: ein Auftrag, Claude ändert und führt die Tests aus 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**Ein Schritt**: ein Auftrag, Claude ändert und lässt die Tests laufen 
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Diff prüfen**: im Diff-Viewer der IDE oder mit `git diff` 
-- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->**Tests**: alle grün, sonst Schritt zurücknehmen 
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->**Selbst nachprüfen**: `.\mvnw.cmd test` im eigenen Terminal, alle grün 
 - &shy;<!-- .element: class="fragment" data-fragment-index="5" -->**Commit**: ein Schritt, ein Commit, dann der nächste Schritt 
 
 </div>
@@ -3889,10 +3889,10 @@ Quelle: Claude Code Docs, <a href="https://code.claude.com/docs/en/hooks" target
 
 <p class="eyebrow">Teil VIII · Skills und Automatisierung</p>
 
-## Exec-Form unter Windows
+## Shell-Form und Exec-Form
 
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**`args` gesetzt**: Exec-Form, Claude Code startet das Programm direkt, ohne Shell 
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Unter Windows braucht die Exec-Form eine echte `.exe`: `java.exe` geht, `.cmd`- und `.bat`-Dateien nicht 
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Ohne `args`**: Shell-Form, Claude Code gibt die Zeile an eine Shell, unter Windows an Git Bash (`"shell": "bash"`); Pipes, `&&` und `||` gehen 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**Mit `args`**: Exec-Form, Claude Code startet das Programm direkt, ohne Shell; unter Windows nur echte `.exe`-Dateien wie `java.exe` 
 - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**`java Datei.java`** führt eine einzelne Quelldatei ohne vorheriges Kompilieren aus (JDK 11 und neuer) 
 
 <div class="quelle fragment" data-fragment-index="4">
